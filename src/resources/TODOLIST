@@ -1,0 +1,72 @@
+Images ???
+
+User profiles
+
+Online sync?
+
+Optimize program to use big data. Не считывать ненужные слова, кэшириовать уже 
+используемые. Подгружать по мере необходимости. Максимально увеличить скорость
+загрузки.
+
+Оптимизировать выбор следующего слова в другом потоке ???
+
+На панели слов отображать время, когда слово было последний раз выбрано. Динамически менять его??
+
+Учитывать, если текущая дата изменилась. (6 утра следующего дня)
+
+github
+
+Проверка знаний для данного слова: вылезает окошко с вариантами отвера, из которых надо выбрать правильное.
+Если ответ неверный, то наказание в виде повышения сложности и добавления слова в лист для повторения.
+
+BundlePanel deleting edited word. Fix exception
+Exception in thread "AWT-EventQueue-0" java.lang.IndexOutOfBoundsException: Index: 47, Size: 47
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at com.words.gui.BundlePanel$BundleTableModel.getValueAt(BundlePanel.java:632)
+	at javax.swing.JTable.getValueAt(JTable.java:2717)
+	at javax.swing.JTable.prepareRenderer(JTable.java:5706)
+	at javax.swing.plaf.basic.BasicTableUI.paintCell(BasicTableUI.java:2114)
+	at javax.swing.plaf.basic.BasicTableUI.paintCells(BasicTableUI.java:2016)
+	at javax.swing.plaf.basic.BasicTableUI.paint(BasicTableUI.java:1812)
+	at javax.swing.plaf.ComponentUI.update(ComponentUI.java:161)
+	at javax.swing.JComponent.paintComponent(JComponent.java:780)
+	at javax.swing.JComponent.paint(JComponent.java:1056)
+	at javax.swing.JComponent.paintToOffscreen(JComponent.java:5219)
+	at javax.swing.BufferStrategyPaintManager.paint(BufferStrategyPaintManager.java:290)
+	at javax.swing.RepaintManager.paint(RepaintManager.java:1265)
+	at javax.swing.JComponent._paintImmediately(JComponent.java:5167)
+	at javax.swing.JComponent.paintImmediately(JComponent.java:4978)
+	at javax.swing.RepaintManager$4.run(RepaintManager.java:824)
+	at javax.swing.RepaintManager$4.run(RepaintManager.java:807)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:807)
+	at javax.swing.RepaintManager.paintDirtyRegions(RepaintManager.java:782)
+	at javax.swing.RepaintManager.prePaintDirtyRegions(RepaintManager.java:731)
+	at javax.swing.RepaintManager.access$1300(RepaintManager.java:64)
+	at javax.swing.RepaintManager$ProcessingRunnable.run(RepaintManager.java:1720)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:749)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:702)
+	at java.awt.EventQueue$3.run(EventQueue.java:696)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(ProtectionDomain.java:75)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:719)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+«»
+
+Add timestamp when complexity has been changed? ??? problem if word stays active too long you have to check it and reeanble complexity button
+Last edited timestamp? ??? doubtful
+
+Add JUnit tests for Model interface
+Add lazy initialization (addAuxiliaryWords) if bootstrap time becomes too large
+Add bundles with future dates
+
+Move chaching into controller and use WeakHashMap?
